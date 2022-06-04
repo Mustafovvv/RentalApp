@@ -1,4 +1,4 @@
-﻿using AnotherTry.Models;
+﻿using RentalApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnotherTry.Controllers
+namespace RentalApp.Controllers
 {
     public class HomeController : Controller
     {

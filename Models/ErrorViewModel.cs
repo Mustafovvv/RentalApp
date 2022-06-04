@@ -1,6 +1,6 @@
 using System;
 
-namespace AnotherTry.Models
+namespace RentalApp.Models
 {
     public class ErrorViewModel
     {

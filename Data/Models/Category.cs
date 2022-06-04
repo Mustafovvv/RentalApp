@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RentalApp.Data.Models
+﻿namespace RentalApp.Data.Models
 {
-    public class Category
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    public class Category:BaseModel
     {
+        public Category()
+        {
+            this.Properties = new HashSet<Property>();
+        }
+        [Required]
+        public string Type { get; set; }
+        public ICollection<Property> Properties { get; set; }
     }
 }

@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿namespace RentalApp.Data.Models
+{  
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
-namespace AnotherTry.Data.Models
-{
-    public class User
+    public class User: BaseModel
     {
+        public User()
+        {
+            this.Properties = new HashSet<Property>();
+        }
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
+        [Required]
+        public int Age { get; set; }
+        [Required]
+        public int Phone { get; set; }
+        public ICollection<Property> Properties { get; set; }
     }
 }
